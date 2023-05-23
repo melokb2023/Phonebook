@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+ 
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Create Contact</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()" fill="clear">
+        <ion-icon class="addIcon" name="close"></ion-icon>
+    </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div>
+<ion-grid class="Grid">
+  <ion-row (click)="contactList()" class="center text">
+    <ion-col>
+      <ion-icon name="add-outline"></ion-icon>
+      Pick from Contact List
+    </ion-col>
+  </ion-row>
+  <ion-row class="center">
+    OR
+  </ion-row>
+  <ion-row class="center">
+    <ion-row>
+      <ion-col>
+        <ion-input clearInput type="text" placeholder="Name" [(ngModel)]="contactInfo.name"
+          class="input ion-padding-horizontal" clear-input="true"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input clearInput type="email" placeholder="Email" [(ngModel)]="contactInfo.email"
+          class="input ion-padding-horizontal" clear-input="true"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input clearInput type="number" placeholder="Phone Number" [(ngModel)]="contactInfo.number"
+          class="input ion-padding-horizontal" clear-input="true"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="createNewContact()">
+          <div>Create Contact</div>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-row>
+</ion-grid>
+</div>
+</ion-content>
